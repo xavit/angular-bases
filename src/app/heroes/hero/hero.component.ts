@@ -6,11 +6,23 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.css'],
 })
 export class HeroComponent {
-  public name: string = 'Ironman';
+  public name: string = 'ironman';
 
   public age: number = 45;
 
   public get capitalizedName(): string {
     return this.name.toUpperCase();
+  }
+
+  getHeroDescription(): string {
+    return `${this.name} - ${this.age}`;
+  }
+
+  changeHeroName(): void {
+    this.name = 'spiderman';
+  }
+
+  changeHeroAge(): void {
+    this.age = 15;
   }
 }

@@ -8,13 +8,15 @@
     <dd>{{ age }}</dd>
 
     <td>Método:</td>
-    <dd>algún metodo</dd>
+    <dd>{{ getHeroDescription() }}</dd>
 
     <td>Capitalizado:</td>
-    <dd>nombre capitalizado</dd>
+    <dd>{{ capitalizedName }}</dd>
   </dl>
 
-  <button class="btn btn-primary mx-2">Cabiar nombre</button>
+  <button class="btn btn-primary mx-2" (click)="changeHeroName()">
+    Cabiar nombre
+  </button>
 
-  <button class="btn btn-primary">Cabiar edad</button>
+  <button class="btn btn-primary" (click)="changeHeroAge()">Cabiar edad</button>
 </div>
